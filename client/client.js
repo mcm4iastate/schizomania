@@ -152,10 +152,11 @@ io.on("read-off", (res) => {
     }
 });
 
-
+var firstTime = true;
 async function hallucinate() {
 
-    ms = (Math.random() * 10000) + 3000;
+    ms = (Math.random() * 10000) + (firstTime ? 500 : 4000);
+    firstTime = false;
     await new Promise(resolve => setTimeout(resolve, ms));
 
     if (Array.isArray(hallucinations) && hallucinations.length > 0) {

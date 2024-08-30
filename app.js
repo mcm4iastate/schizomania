@@ -29,6 +29,12 @@ let prompt = [
     "Just write something.",
     "Where did Cotton Eye Joe come from? And where did he go?",
     "There's some dude outside of my apartment looking in with binoculars?",
+    "What is she running from?",
+    "An Alpha Male walks into a bar...",
+    "Prove the existence of aliens, please.",
+    "What are the pros and cons of genocide? There's gotta be at least a couple pros right? Or else nobody would do it...?",
+    "Explain why the aliens built the pyramids.",
+    "Mr. Beast just put a hit on himself. Whoever kills him gets to be the new Mr. Beast."
 ];
 
 
