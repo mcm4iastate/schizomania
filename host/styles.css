@@ -1,0 +1,136 @@
+body {
+    background: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 h2 h3 h4 h5 h6 p {
+    margin: 0;
+    padding: 0;
+}
+
+#pregame {
+    background-color: black;
+    text-align: center;
+    margin: auto;
+    padding: 8px;
+    width: 80vw;
+    max-width: 500px;
+    border: 4px dashed white;
+    margin-top: 14px;
+}
+
+#players {
+    overflow:hidden;
+    text-align:center; 
+    width:100%
+}
+#players-left, #players-right {
+    float: left;
+    width: 50%;
+    vertical-align: top;
+}
+
+#center {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#pregame-button {
+    background: white;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px;
+    margin-top: 16px;
+}
+#pregame-button:hover {
+    background: #bbbbbb;
+}
+
+#players-label {
+    color: gray;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#players {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+#round {
+    color: gray;
+    font-size: 16px;
+    margin: 0;
+}
+
+#code {
+    margin:0;
+    font-size: 60px;
+}
+
+#code-label {
+    color: gray;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+#write-timer {
+    font-size: 140px;
+    margin:0;
+}
+
+#break-countdown {
+    font-size: 140px;
+    margin:0;
+}
+#ready {
+    color: gray;
+    font-size: 16px;
+    margin: 0;
+}
+
+#post-game {
+    background-color: black;
+    text-align: center;
+    margin: auto;
+    padding: 8px;
+    width: 80vw;
+    max-width: 500px;
+    border: 4px dashed white;
+    margin-top: 14px;
+}
+
+#current-prompt {
+    font-size: 16px;
+    color: gray;
+}
+
+#current-comp {
+    font-size: 18px;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: brown;
+    transition: transform 1s linear;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Play ~ Schizomania</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <div id="background-text">
+        <!-- Background text looking stuff -->
+    </div>
+
+    <div id="center">
+        <h1 id="title" style="padding:0;margin:0;margin-bottom:10px;font-size:50px;">Schizomania</h1>
+
+        <div id="join">
+
+            <input type="text" id="join-code-box" style="margin-bottom: 7px;" placeholder="Enter Room Code">
+            <input type="text" id="name-box" style="margin-top: 7px;" placeholder="Enter Name">
+
+            <button onclick="join()">Join</button>
+        </div>
+
+        <div id="game" style="display:none;">
+            <div id="prompt-container" style="width: 74%; margin: auto;">
+                <h6 id="prompt-label" style="text-align: center">Prompt:</h6>
+                <h3 id="prompt" style="display:block;"></h3>
+            </div>
+
+            <p id="current" style="word-wrap: break-word;"></p>
+
+            <p id="tempround"></p>
+
+            <div id="countdown" style="display:none;">
+                <h3 style="margin: 2px;">Next Round in...</h3>
+                <p style="margin: 2px;" id="count"></p>
+            </div>
+
+            <h2 id="round-countdown" style="display:none;"></h2>
+
+            <textarea id="contribution" name="contribution" rows="4" cols="60" placeholder="What should come next?..."></textarea>
+        </div>
+
+        <button id="reload" onClick="window.location.reload()" style="display:none;">Refresh Page</button>
+    </div>
+</body>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+
+</html>

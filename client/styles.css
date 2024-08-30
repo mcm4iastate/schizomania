@@ -1,0 +1,143 @@
+body {
+    background: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 h2 h3 h4 h5 h6 p {
+    margin: 0;
+    padding: 0;
+}
+
+#join {
+    background-color: black;
+    text-align: center;
+    margin: auto;
+    padding: 8px;
+    width: 80vw;
+    max-width: 500px;
+    border: 4px dashed white;
+}
+#join input {
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+#join button {
+    background: white;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 16px;
+}
+#join button:hover {
+    background: #BBB;
+}
+
+#center {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#game {
+    background-color: black;
+    text-align: center;
+    margin: auto;
+    padding: 8px;
+    width: 80vw;
+    max-width: 500px;
+    border: 4px dashed white;
+    display:none;
+}
+
+#contribution {
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#tempround {
+    color: rgb(194, 194, 194);
+    margin: 4px;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+#count {
+    color:rgb(194, 194, 194);
+    margin-top: 4px;
+    font-size: 20px;
+}
+
+#round-countdown {
+    color: rgb(194, 194, 194);
+    margin-top:4px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#current {
+    margin: 12px;
+    margin-top: 4px;
+    font-size: 20px;
+}
+
+#reload {
+    background: #C8C8C8;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 16px;
+    padding: 6px;
+    margin: auto;
+    text-align: center;
+}
+#reload:hover {
+    background: #EEE;
+}
+
+#prompt {
+    color:gray;
+    font-size: 16px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+#prompt-label {
+    color: #333;
+    margin: 2px;
+    padding: 0;
+}

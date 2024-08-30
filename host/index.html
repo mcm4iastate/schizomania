@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Host ~ Schizomania</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/mespeak/mespeak/mespeak.js"></script>
+</head>
+
+<body>
+
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2"></div>
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2"></div>
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2"></div>
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2"></div>
+
+    <div id="center">
+
+        <h1 id="title" style="padding:0;margin:0;font-size:50px;">Schizomania</h1>
+        <h3 id="subtitle" style="color:brown;margin:0;margin-top:0;font-size:30px;">Host</h3>
+
+        <div id="pregame">
+            <p id="code-label">Room Code:</p>
+            <h4 id="code"></h3>
+
+                <h3 id="players-label" style="display:none;">Connected Players: </h3>
+                <div id="players">
+                    <div id="players-left"></div>
+                    <div id="players-right"></div>
+                </div>
+
+        </div>
+
+        <button id="pregame-button" onClick='() => socket.emit("start")'>Start Game</button>
+
+        <div id="game" style="display:none;">
+
+            <div id="ready-div">
+                <h3 id="break-countdown"></h3>
+                <h2 id="ready" style="color: gray;">Next in...</h2>
+            </div>
+
+            <h1 id="write-timer"></h1>
+
+            <p id="round"></p>
+        </div>
+
+        <div id="post-game" style="display:none;">
+            <div style="width:85%;margin:auto;">
+                <p id="current-prompt"></p>
+            <p id="current-comp"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+
+</html>
