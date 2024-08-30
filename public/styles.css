@@ -32,7 +32,7 @@ body {
 
 #host {
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     margin: 0;
     margin-top: 10px;
 }
@@ -43,7 +43,7 @@ a {
 
 #join {
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -60,10 +60,8 @@ a {
     background-color: black;
     text-align: center;
     margin: auto;
-    padding: 8px;
-    width: 80vw;
-    max-width: 500px;
-    border: 4px dashed white;
+    padding: 12px;
+    border: 7px dashed white;
     margin-top: 30px;
-    width: 150px;
+    width: 300px;
 }

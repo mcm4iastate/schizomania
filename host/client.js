@@ -44,6 +44,7 @@ socket.on("update-players", (playerslist) => {
     for (var i = 0; i < playerslist.length; i++) {
 
         var temp = document.createElement("p");
+        temp.style.margin = "2px";
 
         if (l) {
             temp.innerText = playerslist[i];

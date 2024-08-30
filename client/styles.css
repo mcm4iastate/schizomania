@@ -5,6 +5,7 @@ body {
     font-weight: bolder;
     height: 100vh;
     width: 100vw;
+    min-width:600px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -23,31 +24,35 @@ h1 h2 h3 h4 h5 h6 p {
     margin: auto;
     padding: 8px;
     width: 80vw;
-    max-width: 500px;
-    border: 4px dashed white;
+    max-width: 760px;
+    border: 8px dashed white;
 }
 #join input {
     padding: 5px;
     box-sizing: border-box;
+    width: 100%;
     margin: 0;
     margin: auto;
     display: block;
-    width: 100%;
     text-align: center;
     background-color: black;
-    border: 2px solid white;
+    border: 3px solid white;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 38px;
 }
 #join button {
     background: white;
     border: none;
     border-radius: 0;
+    padding: 6px;
     color: black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 38px;
     margin-top: 16px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 #join button:hover {
     background: #BBB;
@@ -69,12 +74,12 @@ h1 h2 h3 h4 h5 h6 p {
     padding: 8px;
     width: 80vw;
     max-width: 500px;
-    border: 4px dashed white;
+    border: 8px dashed white;
     display:none;
 }
 
 #contribution {
-    padding: 5px;
+    padding: 8px;
     box-sizing: border-box;
     margin: 0;
     margin: auto;
@@ -82,36 +87,36 @@ h1 h2 h3 h4 h5 h6 p {
     width: 100%;
     text-align: center;
     background-color: black;
-    border: 2px solid white;
+    border: 3px solid white;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 #tempround {
     color: rgb(194, 194, 194);
     margin: 4px;
-    font-size: 12px;
+    font-size: 24px;
     margin-bottom: 4px;
 }
 
 #count {
     color:rgb(194, 194, 194);
     margin-top: 4px;
-    font-size: 20px;
+    font-size: 54px;
 }
 
 #round-countdown {
     color: rgb(194, 194, 194);
     margin-top:4px;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 54px;
+    margin-bottom: 30px;
 }
 
 #current {
-    margin: 12px;
-    margin-top: 4px;
-    font-size: 20px;
+    margin: 20px;
+    margin-top: 8px;
+    font-size: 36px;
 }
 
 #reload {
@@ -120,7 +125,7 @@ h1 h2 h3 h4 h5 h6 p {
     border-radius: 0;
     color: black;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 32px;
     margin-top: 16px;
     padding: 6px;
     margin: auto;
@@ -132,7 +137,7 @@ h1 h2 h3 h4 h5 h6 p {
 
 #prompt {
     color:gray;
-    font-size: 16px;
+    font-size: 28px;
     margin-top: 1px;
     margin-bottom: 10px;
 }
@@ -140,4 +145,12 @@ h1 h2 h3 h4 h5 h6 p {
     color: #333;
     margin: 2px;
     padding: 0;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: brown;
 }

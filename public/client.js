@@ -1,7 +1,5 @@
 
 
-
-
 const speed = 3;
 
 function moveCircle(circle) {
@@ -26,6 +24,7 @@ function animateCircles() {
     });
     requestAnimationFrame(animateCircles);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const circles = document.querySelectorAll('.circle');

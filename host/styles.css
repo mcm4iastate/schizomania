@@ -24,7 +24,7 @@ h1 h2 h3 h4 h5 h6 p {
     padding: 8px;
     width: 80vw;
     max-width: 500px;
-    border: 4px dashed white;
+    border: 8px dashed white;
     margin-top: 14px;
 }
 
@@ -36,7 +36,10 @@ h1 h2 h3 h4 h5 h6 p {
 #players-left, #players-right {
     float: left;
     width: 50%;
+    padding:0;
+    margin: 0;
     vertical-align: top;
+    overflow: hidden;
 }
 
 #center {
@@ -54,9 +57,9 @@ h1 h2 h3 h4 h5 h6 p {
     border-radius: 0;
     color: black;
     font-weight: bold;
-    font-size: 16px;
-    padding: 6px;
-    margin-top: 16px;
+    font-size: 24px;
+    padding: 8px;
+    margin-top: 30px;
 }
 #pregame-button:hover {
     background: #bbbbbb;
@@ -65,44 +68,43 @@ h1 h2 h3 h4 h5 h6 p {
 #players-label {
     color: gray;
     margin: 0;
-    margin-top: 20px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 #players {
-    font-size: 17px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 32px;
 }
 
 #round {
     color: gray;
-    font-size: 16px;
+    font-size: 30px;
     margin: 0;
 }
 
 #code {
     margin:0;
-    font-size: 60px;
+    font-size: 130px;
 }
 
 #code-label {
     color: gray;
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 #write-timer {
-    font-size: 140px;
+    font-size: 240px;
     margin:0;
 }
 
 #break-countdown {
-    font-size: 140px;
+    font-size: 240px;
     margin:0;
 }
 #ready {
     color: gray;
-    font-size: 16px;
+    font-size: 28px;
     margin: 0;
 }
 
@@ -112,18 +114,18 @@ h1 h2 h3 h4 h5 h6 p {
     margin: auto;
     padding: 8px;
     width: 80vw;
-    max-width: 500px;
-    border: 4px dashed white;
-    margin-top: 14px;
+    max-width: 760px;
+    border: 8px dashed white;
+    margin-top: 30px;
 }
 
 #current-prompt {
-    font-size: 16px;
+    font-size: 24px;
     color: gray;
 }
 
 #current-comp {
-    font-size: 18px;
+    font-size: 32px;
 }
 
 .circle {
