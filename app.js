@@ -29,7 +29,8 @@ let prompt = [
     "Just write something.",
     "Where did Cotton Eye Joe come from? And where did he go?",
     "There's some dude outside of my apartment looking in with binoculars?",
-]
+];
+
 
 io.on("connection", (socket) => {
 
@@ -69,6 +70,9 @@ io.on("connection", (socket) => {
             console.log(socket.room + " failed to start game, not enough players");
             socket.emit("start-fail", "not enough players");
         }
+    });
+    socket.on("speaking", (res) => {
+        io.to(socket.room).emit("read-off", res);
     });
 
 

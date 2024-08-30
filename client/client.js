@@ -1,5 +1,38 @@
 var socket = io();
 
+meSpeak.loadConfig("mespeak_config.json");
+meSpeak.loadVoice("voices/en/en-us.json");
+
+let hallucinations = [
+    "Destroy that document.",
+    "Don’t eat that food.",
+    "Turn off all the lights.",
+    "You must stay awake all night.",
+    "Ignore what they are saying.",
+    "If you go outside, something bad will happen.",
+    "They are watching you right now.",
+    "You will never be safe.",
+    "Everyone is plotting against you.",
+    "They will hurt you if you don’t listen.",
+    "They’re coming to get you.",
+    "You’re in danger.",
+    "They're in the walls.",
+    "They’re coming to get you.",
+    "You need to leave the house.",
+    "Don’t trust anyone.",
+    "You need to burn it down",
+    "Throw away your phone.",
+    "Write down everything you hear.",
+    "You must search the entire house now.",
+    "They're listening",
+    "Stop taking your medication.",
+    "If you tell anyone, they’ll hurt you.",
+    "They’re going to find you.",
+    "Something terrible is going to happen if you dont leave.",
+    "They know all your secrets.",
+    "They can see inside your mind."
+]
+
 var tempround = document.getElementById("tempround");
 
 function join() {
@@ -34,6 +67,7 @@ socket.on("update", (time, round, roundnum, inbetween) => {
 
 socket.on("start-success", () => {
     document.getElementById("game").style.display = "block";
+    hallucinate();
 });
 
 socket.on("host-dc", () => {
@@ -108,3 +142,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     animateCircles();
 });
+
+io.on("read-off", (res) => {
+    if (Array.isArray(hallucinations) && hallucinations.length > 0) {
+        i = Math.floor(Math.random() * hallucinations.length);
+        meSpeak.speak(res, {amplitude: 100, pitch: ((Math.random() * 50) + 20), speed: ((Math.random() * 30) + 140), wordgap: 3, variant: ("" + (Math.random() < 0.5 ? 'm' : 'f') + (Math.floor(Math.random() * 4) + 1))});
+    } else {
+        console.error("Failed to speak a final story thing");
+    }
+});
+
+
+async function hallucinate() {
+
+    ms = (Math.random() * 10000) + 3000;
+    await new Promise(resolve => setTimeout(resolve, ms));
+
+    if (Array.isArray(hallucinations) && hallucinations.length > 0) {
+        i = Math.floor(Math.random() * hallucinations.length);
+        console.log(hallucinations[i]);
+        meSpeak.speak(hallucinations[i], {amplitude: 100, pitch: ((Math.random() * 50) + 20), speed: ((Math.random() * 30) + 140), wordgap: 3, variant: ("" + (Math.random() < 0.5 ? 'm' : 'f') + (Math.floor(Math.random() * 4) + 1))});
+    } else {
+        console.error('The hallucinations array is either not yet defined or empty.');
+    }
+
+    hallucinate();
+}
