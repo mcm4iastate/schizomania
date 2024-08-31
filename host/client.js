@@ -20,7 +20,6 @@ setTimeout(() => {beep.play()}, 30000);
 const audio = document.getElementById('myAudio');
 audio.loop = true;
 audio.volume = 0.5;
-audio.play();
 
 document.addEventListener("click", function() {
     audio.play().catch(error => {
