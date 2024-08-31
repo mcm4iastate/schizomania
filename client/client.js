@@ -145,10 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCircles();
 });
 
-io.on("read-off", (res) => {
+socket.on("read-off", (res) => {
 
     hallucinating = false;
-    
+
     if (Array.isArray(hallucinations) && hallucinations.length > 0) {
         i = Math.floor(Math.random() * hallucinations.length);
         meSpeak.speak(res, {amplitude: 100, pitch: ((Math.random() * 50) + 20), speed: ((Math.random() * 30) + 140), wordgap: 3, variant: ("" + (Math.random() < 0.5 ? 'm' : 'f') + (Math.floor(Math.random() * 4) + 1))});
