@@ -9,8 +9,8 @@ const io = new Server(server);
 // dictionary storing 
 var room = {};
 
-let ROUND_LENGTH = 10;
-let PAUSE_LENGTH = 2;
+let ROUND_LENGTH = 20;
+let PAUSE_LENGTH = 3;
 let MIN_ROUNDS = 3;
 
 let prompt = [
