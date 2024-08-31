@@ -67,6 +67,11 @@ io.on("connection", (socket) => {
         console.log(Object.keys(room));
     });
     socket.on("start", () => {
+        if(!room[socket.room] || !room[socket.room.count]) {
+            console.log(socket.room + " error");
+            socket.emit("start-fail", "error");
+            return;
+        }
         if (room[socket.room].count > 1) {
             start(socket);
             console.log(socket.room + " Started Game");
