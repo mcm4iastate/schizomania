@@ -13,6 +13,15 @@ const options = {
     variant: "m2"    // Voice variant (e.g., female voice)
 };
 
+const beep = document.getElementById('beep');
+beep.volume = 0.01;
+setTimeout(() => {beep.play()}, 30000);
+
+const audio = document.getElementById('myAudio');
+audio.loop = true;
+audio.volume = 0.5;
+audio.play();
+
 socket.emit("host", null);
 
 if (!roomcode) {
