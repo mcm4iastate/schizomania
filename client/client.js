@@ -33,6 +33,8 @@ let hallucinations = [
     "They can see inside your mind."
 ]
 
+var hallucinating = true;
+
 var tempround = document.getElementById("tempround");
 
 function join() {
@@ -144,6 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 io.on("read-off", (res) => {
+
+    hallucinating = false;
+    
     if (Array.isArray(hallucinations) && hallucinations.length > 0) {
         i = Math.floor(Math.random() * hallucinations.length);
         meSpeak.speak(res, {amplitude: 100, pitch: ((Math.random() * 50) + 20), speed: ((Math.random() * 30) + 140), wordgap: 3, variant: ("" + (Math.random() < 0.5 ? 'm' : 'f') + (Math.floor(Math.random() * 4) + 1))});
@@ -167,5 +172,7 @@ async function hallucinate() {
         console.error('The hallucinations array is either not yet defined or empty.');
     }
 
-    hallucinate();
+    if(hallucinating) {
+        hallucinate();
+    }
 }

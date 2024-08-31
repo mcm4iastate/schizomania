@@ -95,7 +95,7 @@ async function playNext(compositions, prompts) {
         document.getElementById("current-comp").innerText = compositions[i];
         
         // with random voice
-        io.emit("speaking", prompts[i] + "\n" + compositions[i]);
+        socket.emit("speaking", prompts[i] + "\n" + compositions[i]);
         await meSpeak.speak(prompts[i] + "\n" + compositions[i] + "\n\n", {amplitude: 100, pitch: ((Math.random() * 50) + 20), speed: ((Math.random() * 20) + 120), wordgap: 3, variant: ("" + (Math.random() < 0.5 ? 'm' : 'f') + (Math.floor(Math.random() * 4) + 1)), callback: () => playNext(compositions, prompts)});
         
         i++;
