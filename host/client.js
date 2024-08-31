@@ -22,6 +22,12 @@ audio.loop = true;
 audio.volume = 0.5;
 audio.play();
 
+document.addEventListener("click", function() {
+    audio.play().catch(error => {
+        console.log("Autoplay was prevented. Click anywhere to play the audio.");
+    });
+}, { once: true });
+
 socket.emit("host", null);
 
 if (!roomcode) {
